@@ -3,3 +3,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-serif text-neutral-600;
+}
+
+h1 {
+	@apply text-2xl lg:text-5xl text-neutral-900 font-bold;
+}
+
+h2 {
+	@apply text-2xl font-medium;
+}
+
+h3 {
+	@apply text-xl italic;
+}
+
+body {
+	@apply text-neutral-600 text-sm lg:text-base px-4 py-6;
+}
+
+strong {
+	@apply text-neutral-800 font-semibold;
+}
+
+.point {
+	@apply text-white bg-[#F2994A];
+}
+
+.lrtop_layout {
+	@apply grid items-start gap-4;
+	grid-template-columns: max-content 1fr;
+}
+
+.list-style {
+	@apply w-full pl-6;
+	position: relative;
+}
+
+.list-style::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 2px;
+	width: 14px;
+	aspect-ratio: 1/1;
+	@apply ring-1 ring-gray-400 rounded-sm;
+}
